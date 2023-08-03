@@ -4,7 +4,7 @@ import unittest
 from collections import defaultdict
 from decimal import Decimal
 
-from wikipedia import wikipedia
+from huntwikipedia import huntwikipedia
 from request_mock_data import mock_data
 
 
@@ -22,7 +22,7 @@ wikipedia._wiki_request = _wiki_request()
 
 
 class TestSearchLoc(unittest.TestCase):
-  """Test the functionality of wikipedia.geosearch."""
+  """Test the functionality of huntwikipedia.geosearch."""
 
   def test_geosearch(self):
     """Test parsing a Wikipedia location request result."""

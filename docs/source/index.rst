@@ -14,6 +14,16 @@ Search Wikipedia, get article summaries, get data like links and images from a p
 
 	>>> import wikipedia
 
+        >>> print huntwikipedia.summary("Wikipedia")
+        # Wikipedia (/ˌwɪkɨˈpiːdiə/ or /ˌwɪkiˈpiːdiə/ WIK-i-PEE-dee-ə) is a collaboratively edited, multilingual, free Internet encyclopedia supported by the non-profit Wikimedia Foundation...
+
+    Go to the
+
+        >>> print huntwikipedia.summary("Wikipedia")
+        # Wikipedia (/ˌwɪkɨˈpiːdiə/ or /ˌwɪkiˈpiːdiə/ WIK-i-PEE-dee-ə) is a collaboratively edited, multilingual, free Internet encyclopedia supported by the non-profit Wikimedia Foundation...
+
+    Go to the
+
 	>>> print wikipedia.summary("Wikipedia")
 	# Wikipedia (/ˌwɪkɨˈpiːdiə/ or /ˌwɪkiˈpiːdiə/ WIK-i-PEE-dee-ə) is a collaboratively edited, multilingual, free Internet encyclopedia supported by the non-profit Wikimedia Foundation...
 

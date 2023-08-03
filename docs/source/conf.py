@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# wikipedia documentation build configuration file, created by
+# huntwikipedia documentation build configuration file, created by
 # sphinx-quickstart on Thu Aug 22 11:23:34 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'wikipedia'
+project = u'huntwikipedia'
 copyright = u'2013, Jonathan Goldsmith'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -187,7 +187,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-    ('index', 'wikipedia.tex', u'wikipedia Documentation',
+    ('index', 'huntwikipedia.tex', u'huntwikipedia Documentation',
      u'Jonathan Goldsmith', 'manual'),
 ]
 
@@ -217,7 +217,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'wikipedia', u'wikipedia Documentation',
+    ('index', 'huntwikipedia', u'huntwikipedia Documentation',
      [u'Jonathan Goldsmith'], 1)
 ]
 
@@ -231,8 +231,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'wikipedia', u'wikipedia Documentation',
-     u'Jonathan Goldsmith', 'wikipedia', 'One line description of project.',
+    ('index', 'huntwikipedia', u'huntwikipedia Documentation',
+     u'Jonathan Goldsmith', 'huntwikipedia', 'One line description of project.',
      'Miscellaneous'),
 ]
 

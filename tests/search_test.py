@@ -3,7 +3,7 @@ import unittest
 
 from collections import defaultdict
 
-from wikipedia import wikipedia
+from huntwikipedia import huntwikipedia
 from request_mock_data import mock_data
 
 
@@ -21,7 +21,7 @@ wikipedia._wiki_request = _wiki_request()
 
 
 class TestSearch(unittest.TestCase):
-  """Test the functionality of wikipedia.search."""
+  """Test the functionality of huntwikipedia.search."""
 
   def test_search(self):
     """Test parsing a Wikipedia request result."""

@@ -1,5 +1,5 @@
 """
-Global wikipedia exception and warning classes.
+Global huntwikipedia exception and warning classes.
 """
 
 import sys

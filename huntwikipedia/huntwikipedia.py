@@ -16,7 +16,7 @@ API_URL = 'https://huntshowdown.fandom.com/api.php'
 RATE_LIMIT = False
 RATE_LIMIT_MIN_WAIT = None
 RATE_LIMIT_LAST_CALL = None
-USER_AGENT = 'wikipedia (https://github.com/goldsmith/Wikipedia/)'
+USER_AGENT = 'huntwikipedia (https://github.com/goldsmith/Wikipedia/)'
 
 
 def set_lang(prefix):
@@ -51,7 +51,7 @@ def set_rate_limiting(rate_limit, min_wait=timedelta(milliseconds=50)):
   '''
   Enable or disable rate limiting on requests to the Mediawiki servers.
   If rate limiting is not enabled, under some circumstances (depending on
-  load on Wikipedia, the number of requests you and other `wikipedia` users
+  load on Wikipedia, the number of requests you and other `huntwikipedia` users
   are making, and other factors), Wikipedia may return an HTTP timeout error.
 
   Enabling rate limiting generally prevents that issue, but please note that
@@ -122,7 +122,7 @@ def search(query, results=10, suggestion=False):
 @cache
 def geosearch(latitude, longitude, title=None, results=10, radius=1000):
   '''
-  Do a wikipedia geo search for `latitude` and `longitude`
+  Do a huntwikipedia geo search for `latitude` and `longitude`
   using HTTP API described in http://www.mediawiki.org/wiki/Extension:GeoData
 
   Arguments:
@@ -682,11 +682,11 @@ def languages():
   '''
   List all the currently supported language prefixes (usually ISO language code).
 
-  Can be inputted to `set_lang` to change the Mediawiki that `wikipedia` requests
+  Can be inputted to `set_lang` to change the Mediawiki that `huntwikipedia` requests
   results from.
 
   Returns: dict of <prefix>: <local_lang_name> pairs. To get just a list of prefixes,
-  use `wikipedia.languages().keys()`.
+  use `huntwikipedia.languages().keys()`.
   '''
   response = _wiki_request({
     'meta': 'siteinfo',

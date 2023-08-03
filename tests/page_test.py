@@ -2,7 +2,7 @@
 from decimal import Decimal
 import unittest
 
-from wikipedia import wikipedia
+from huntwikipedia import huntwikipedia
 from request_mock_data import mock_data
 
 
@@ -13,7 +13,7 @@ wikipedia._wiki_request = _wiki_request
 
 
 class TestPageSetUp(unittest.TestCase):
-  """Test the functionality of wikipedia.page's __init__ and load functions."""
+  """Test the functionality of huntwikipedia.page's __init__ and load functions."""
 
   def test_missing(self):
     """Test that page raises a PageError for a nonexistant page."""
@@ -78,10 +78,10 @@ class TestPageSetUp(unittest.TestCase):
 
 
 class TestPage(unittest.TestCase):
-  """Test the functionality of the rest of wikipedia.page."""
+  """Test the functionality of the rest of huntwikipedia.page."""
 
   def setUp(self):
-    # shortest wikipedia articles with images and sections
+    # shortest huntwikipedia articles with images and sections
     self.celtuce = wikipedia.page("Celtuce")
     self.cyclone = wikipedia.page("Tropical Depression Ten (2005)")
     self.great_wall_of_china = wikipedia.page("Great Wall of China")
