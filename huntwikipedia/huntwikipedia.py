@@ -118,51 +118,6 @@ def search(query, results=10, suggestion=False):
 
   return list(search_results)
 
-
-@cache
-def geosearch(latitude, longitude, title=None, results=10, radius=1000):
-  '''
-  Do a huntwikipedia geo search for `latitude` and `longitude`
-  using HTTP API described in http://www.mediawiki.org/wiki/Extension:GeoData
-
-  Arguments:
-
-  * latitude (float or decimal.Decimal)
-  * longitude (float or decimal.Decimal)
-
-  Keyword arguments:
-
-  * title - The title of an article to search for
-  * results - the maximum number of results returned
-  * radius - Search radius in meters. The value must be between 10 and 10000
-  '''
-
-  search_params = {
-    'list': 'geosearch',
-    'gsradius': radius,
-    'gscoord': '{0}|{1}'.format(latitude, longitude),
-    'gslimit': results
-  }
-  if title:
-    search_params['titles'] = title
-
-  raw_results = _wiki_request(search_params)
-
-  if 'error' in raw_results:
-    if raw_results['error']['info'] in ('HTTP request timed out.', 'Pool queue is full'):
-      raise HTTPTimeoutError('{0}|{1}'.format(latitude, longitude))
-    else:
-      raise WikipediaException(raw_results['error']['info'])
-
-  search_pages = raw_results['query'].get('pages', None)
-  if search_pages:
-    search_results = (v['title'] for k, v in search_pages.items() if k != '-1')
-  else:
-    search_results = (d['title'] for d in raw_results['query']['geosearch'])
-
-  return list(search_results)
-
-
 @cache
 def suggest(query):
   '''
@@ -183,7 +138,6 @@ def suggest(query):
     return raw_result['query']['searchinfo']['suggestion']
 
   return None
-
 
 def random(pages=1):
   '''
